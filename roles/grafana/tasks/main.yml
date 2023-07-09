@@ -14,6 +14,10 @@
     name: grafana-server
     enabled: true
     state: started
+    
+- name: Pause for 15 seconds to build app cache
+  ansible.builtin.pause:
+    seconds: 15
 
 - name: "Check if Grafana is accessible."
   uri:
